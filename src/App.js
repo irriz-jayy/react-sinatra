@@ -9,7 +9,9 @@ function App() {
       <Header />
       <Welcome />
       <Post />
-      <div>Test</div>
+      <Post />
+      <Post />
+      <Post />
     </div>
   );
 }
