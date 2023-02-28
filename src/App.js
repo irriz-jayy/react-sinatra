@@ -1,17 +1,15 @@
+import { BrowserRouter, Route, Routes, Switch } from "react-router-dom";
 import "./App.css";
-import Header from "./components/Header";
-import Post from "./components/Post";
-import Welcome from "./components/Welcome";
+import Homepage from "./components/Homepage";
+import NewBlog from "./components/NewBlog";
 
 function App() {
   return (
     <div className="App">
-      <Header />
-      <Welcome />
-      <Post />
-      <Post />
-      <Post />
-      <Post />
+      <Routes>
+        <Route path="/" element={<Homepage />} />
+        <Route path="/new-blog" element={<NewBlog />} />
+      </Routes>
     </div>
   );
 }
