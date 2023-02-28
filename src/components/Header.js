@@ -7,7 +7,7 @@ const Header = () => {
       <div className="container-fluid">
         <Link className="navbar-brand" activeClassName="active" exact to="/">
           <img
-            src="https://raw.githubusercontent.com/irriz-jayy/portfolio_02/main/public/favicon.ico"
+            src="https://bit.ly/3SyrLQe"
             alt=""
             width="30"
             height="24"
