@@ -16,7 +16,7 @@ const Post = () => {
         <a href="#" className="btn btn-primary">
           Update
         </a>{" "}
-        <a href="#" className="btn btn-primary">
+        <a href="#" className="btn btn-danger">
           Delete
         </a>
       </div>
