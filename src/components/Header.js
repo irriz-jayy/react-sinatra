@@ -1,3 +1,5 @@
+import "../App.css";
+
 const Header = () => {
   return <div>hello world</div>;
 };
