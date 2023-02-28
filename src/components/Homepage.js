@@ -5,7 +5,6 @@ import Post from "./Post";
 const Homepage = () => {
   return (
     <div className="home">
-      <Header />
       <Welcome />
       <Post />
       <Post />
