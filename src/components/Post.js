@@ -32,7 +32,7 @@ const Post = () => {
         <div className="card-body" key={id}>
           <h5 className="card-title">{blog.title}</h5>
           <p className="card-text">{blog.content}</p>
-          <Link to={`/blogs/${blog.id}`} className="btn btn-primary">
+          <Link to={`/view/${blog.id}`} className="btn btn-primary">
             View blog
           </Link>
           {"  "}
