@@ -1,27 +1,13 @@
-import { useState, useEffect } from "react";
+import { useParams } from "react-router-dom";
 
-const View = (props) => {
-  const [blog, setBlog] = useState({});
-
-  useEffect(() => {
-    const fetchBlog = async () => {
-      try {
-        const response = await fetch(
-          `http://localhost:9292/blogs/${props.match.params.id}`
-        );
-        const data = await response.json();
-        setBlog(data);
-      } catch (error) {
-        console.error(error);
-      }
-    };
-    fetchBlog();
-  }, [props.match.params.id]);
+const View = () => {
+  const { id } = useParams();
 
   return (
     <div>
-      <h2>{blog.title}</h2>
-      <p>{blog.content}</p>
+      <h1>Blog Details</h1>
+      <p>Blog ID: {id}</p>
+      {/* Display other blog details here */}
     </div>
   );
 };
