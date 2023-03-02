@@ -10,6 +10,21 @@ const Post = () => {
       .then((blogs) => setBlogs(blogs));
   }, []); // <-- add an empty dependency array here
 
+  const handleDelete = async (id) => {
+    console.log("clicked", id);
+    try {
+      const response = await fetch(`http://localhost:9292/blogs/${id}`, {
+        method: "DELETE",
+      });
+      if (response.ok) {
+        alert("Blog deleted successfully");
+        setBlogs(blogs.filter((blog) => blog.id !== id));
+      }
+    } catch (error) {
+      console.error(error);
+    }
+  };
+
   return (
     <div className="card">
       {blogs.map((blog, id) => (
@@ -19,7 +34,11 @@ const Post = () => {
           <a href="#" className="btn btn-primary">
             Update
           </a>{" "}
-          <a href="#" className="btn btn-danger">
+          <a
+            href="#"
+            className="btn btn-danger"
+            onClick={() => handleDelete(blog.id)}
+          >
             Delete
           </a>
         </div>
