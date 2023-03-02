@@ -42,6 +42,15 @@ const Header = () => {
                 New Blog
               </NavLink>
             </li>
+            <li className="nav-item">
+              <NavLink
+                className="nav-link"
+                activeclassname="active"
+                to="/edit-blog"
+              >
+                Edit blog
+              </NavLink>
+            </li>
           </ul>
         </div>
       </div>
