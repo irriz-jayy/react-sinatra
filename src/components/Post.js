@@ -1,5 +1,6 @@
 import "../App.css";
 import { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
 
 const Post = () => {
   const [blogs, setBlogs] = useState([]);
@@ -31,9 +32,10 @@ const Post = () => {
         <div className="card-body" key={id}>
           <h5 className="card-title">{blog.title}</h5>
           <p className="card-text">{blog.content}</p>
-          <a href="#" className="btn btn-primary">
-            Update
-          </a>{" "}
+          <Link to={`/blogs/${blog.id}`} className="btn btn-primary">
+            View blog
+          </Link>
+          {"  "}
           <a
             href="#"
             className="btn btn-danger"
