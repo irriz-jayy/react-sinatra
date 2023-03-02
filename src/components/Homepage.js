@@ -7,9 +7,6 @@ const Homepage = () => {
     <div className="home">
       <Welcome />
       <Post />
-      <Post />
-      <Post />
-      <Post />
     </div>
   );
 };
