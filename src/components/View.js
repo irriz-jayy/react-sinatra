@@ -14,13 +14,13 @@ const View = () => {
 
   return (
     <div>
-      <h1>Blog Details</h1>
+      <h1>Blog</h1>
       {blog ? (
         <>
-          <p>Blog ID: {blog.id}</p>
           <p>Title: {blog.title}</p>
           <p>Content: {blog.content}</p>
           <p>Author ID: {blog.author_id}</p>
+          <button className="btn btn-secondary">Edit</button>
         </>
       ) : (
         <p>Loading blog details...</p>
