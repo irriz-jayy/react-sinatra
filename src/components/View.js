@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
+import "../App.css";
 
 const View = () => {
   const { id } = useParams();
@@ -23,7 +24,7 @@ const View = () => {
           <button className="btn btn-secondary">Edit</button>
         </>
       ) : (
-        <p>Loading blog details...</p>
+        <span class="loader"></span>
       )}
     </div>
   );
