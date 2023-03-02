@@ -12,8 +12,8 @@ const Post = () => {
 
   return (
     <div className="card">
-      {blogs.map((blog) => (
-        <div className="card-body">
+      {blogs.map((blog, id) => (
+        <div className="card-body" key={id}>
           <h5 className="card-title">{blog.title}</h5>
           <p className="card-text">{blog.content}</p>
           <a href="#" className="btn btn-primary">
