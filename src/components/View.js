@@ -36,7 +36,7 @@ const View = () => {
   const handleSave = () => {
     // Save the changes to the backend
     fetch(`http://localhost:9292/blogs/${id}`, {
-      method: "POST",
+      method: "PATCH",
       headers: {
         "Content-Type": "application/json",
       },
